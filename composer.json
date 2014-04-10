@@ -12,12 +12,6 @@
             "email": "contact@webcomm.com.au"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/magento-hackathon/magento-composer-installer"
-        }
-    ],
     "require": {
         "magento-hackathon/magento-composer-installer":"*"
     },
