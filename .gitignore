@@ -103,9 +103,8 @@ publish
 # App code
 !/app/code
 /app/code/*
-!/app/code/community
-/app/code/community/*/*
 !/app/code/local
+/app/code/local/*/*
 
 # App design
 !/app/design
