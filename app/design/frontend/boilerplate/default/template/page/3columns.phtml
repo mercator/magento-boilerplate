@@ -42,13 +42,21 @@
         <?php echo $this->getChildHtml('global_notices') ?>
         <?php echo $this->getChildHtml('breadcrumbs') ?>
 
+        <?php
+            // MERCATOR - Some other sections (i.e. search) assume that the
+            // main content area will be generated first. Generating things
+            // in a different order can cause problems because collections
+            // haven't been loaded/sort params haven't been set/etc, so we
+            // generate the main content first.
+            $_content = $this->getChildHtml('content')
+        ?>
         <div class="layout layout-3-cols">
             <aside role="complementary">
                 <?php echo $this->getChildHtml('left') ?>
             </aside>
             <div role="main">
                 <?php echo $this->getChildHtml('global_messages') ?>
-                <?php echo $this->getChildHtml('content') ?>
+                <?php echo $_content ?>
             </div>
             <aside role="complementary">
                 <?php echo $this->getChildHtml('right') ?>
